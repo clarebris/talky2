@@ -6,6 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'edit', component: EditprofileComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'sidebar', component: SidebarComponent },
 ];
 
 @NgModule({
