@@ -10,6 +10,9 @@ import { LandingComponent } from './landing/landing.component';
 import { ProfileComponent } from './profile/profile.component';
 import { EditprofileComponent } from './editprofile/editprofile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { PeopleComponent } from './people/people.component';
+import { PostComponent } from './post/post.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     LandingComponent,
     ProfileComponent,
     EditprofileComponent,
-    SidebarComponent
+    SidebarComponent,
+    PeopleComponent,
+    PostComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,

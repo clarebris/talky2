@@ -1,24 +1,44 @@
 <div class="flex justify-between p-5">
     <div>
-        <img class="w-[60px]" src="https://cdn.vectorstock.com/i/1000x1000/07/51/letter-t-logo-flat-icon-style-vector-5660751.webp" alt="">
+        <img class="w-[50px]" src="https://cdn.vectorstock.com/i/1000x1000/07/51/letter-t-logo-flat-icon-style-vector-5660751.webp" alt="">
+        <h1 class="italic text-4xl font-bold">Talky</h1>
     </div>
-    <div><form class="flex items-center justify-center">
-        <input
-          type="text"
-          class="border border-gray-300 p-2 rounded-l-full focus:outline-none"
-          placeholder="Search..."
-        />
-        <button
-          type="submit"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-full"
-        >
-          Search
-        </button>
-      </form>
-      </div>
+    
     <div class="flex gap-6 justify-around">
-        <button class="w-[8vw] h-[5vh] border border-gray-300">+ Upload</button>
-        <button class="bg-blue-300 w-[8vw] h-[5vh]">login</button>
+        <button (click)="toggleRegistrationForm()" class="w-[8vw] h-[5vh] border border-gray-300">Get Started</button>
+      
+        <button (click)="toggleLoginForm()" class="bg-blue-300 w-[8vw] h-[5vh]">login</button>
     </div>
+    <hr>
+    <div *ngIf="showLoginForm" class=" p-4 align-center flex items-center justify-center flex-col rounded border-3 border border-gray-300 w-[30vw] ml-auto mr-auto h-[75vh] mt-15">
+      <h1 class="font-bold text-5xl italic">Talky</h1>
+      <form class="flex flex-col gap-10 mt-[40px] mb-[20px]" action="" >
+          <input type="email" placeholder="Email" class="bg-gray-300 h-[5vh] text-black-900 w-[20vw] text-center">
+          <input type="password" placeholder="Password" class="bg-gray-300 h-[5vh] text-black-900 w-[20vw] text-center">
+          <button  (click)="submitLogin()" class="bg-blue-300 w-[20vw] h-[5vh] text-white text-center">Login</button>
+      </form>
+      <p routerLink="" class="mb-4">Forgot password?</p>
+      <p>Don't Have an Account? <span routerLink="" class="text-blue-400">Sign Up</span></p>
+  </div>
+  <div *ngIf="showRegistrationForm" class=" p-4 align-center flex items-center justify-center flex-col rounded border-3 border border-gray-300 w-[30vw] ml-auto mr-auto h-[85vh] mt-12">
+    <h1 class="italic font-bold text-5xl">Talky</h1>
+    <p class="mt-6"><i>sign Up to see your friends <br>photos and posts</i></p>
+    <button class="bg-blue-300 mt-4 mb-4 w-[20vw] h-[5vh] text-center rounded-full border">Login with Facebook</button>
+    <h4><i>Or</i></h4>
+    <form action="" class="flex flex-col gap-10 mt-4 mb-4">
+        <input type="text" placeholder="Username" class=" w-[20vw] h-[5vh] bg-gray-300 text-black placeholder-center text-center">
+        <input type="email" placeholder="Email" class=" w-[20vw]  h-[5vh] bg-gray-300 text-center">
+        <input type="password" placeholder="Password" class=" h-[5vh] w-[20vw] bg-gray-300 text-center">
+        <button (click)="submitRegistration()" class="bg-blue-300 text-white  w-[20vw] h-[5vh] text-center">Register</button>
+    </form>
+    <p>Already Have an Account? <span class="text-blue-300">Login</span></p>
 </div>
-<hr>
+
+  
+</div>
+
+<div>
+  
+  
+</div>
+

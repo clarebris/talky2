@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  showRegistrationForm: boolean = false;
+
+  toggleRegistrationForm() {
+    this.showRegistrationForm = !this.showRegistrationForm;
+  }
+
+  submitRegistration() {
+    // Handle the registration form submission logic here
+    console.log('Submitting registration form...');
+  }
+
 }

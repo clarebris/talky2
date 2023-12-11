@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
+  showRegistrationForm: boolean = false;
+  showLoginForm: boolean = false;
+
+  toggleRegistrationForm() {
+    this.showRegistrationForm = !this.showRegistrationForm;
+  }
+  toggleLoginForm() {
+    this.showLoginForm = !this.showRegistrationForm;
+  }
+
+  submitRegistration() {
+    // Handle the registration form submission logic here
+    console.log('Submitting registration form...');
+  }
+  submitLogin() {
+    // Handle the registration form submission logic here
+    console.log('Submitting login form...');
+  }
+
 
 }
