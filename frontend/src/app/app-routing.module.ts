@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'sidebar', component: SidebarComponent },
   { path: 'post', component: PostComponent },
-  { path: 'notfound', component: NotfoundComponent },
+  { path: '**', component: NotfoundComponent },
 ];
 
 @NgModule({

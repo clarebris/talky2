@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProfileComponent } from '../profile/profile.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
   hidden=true
+  constructor(public dialog: MatDialog) {}
+  profileModal(): void {
+    const dialogRef = this.dialog.open(ProfileComponent, {
+      width: '400px',
+      data: { title: 'Modal Title', content: 'Modal Content' }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed', result);
+    });
+  }
 }

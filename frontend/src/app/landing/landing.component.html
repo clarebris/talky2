@@ -1,44 +1,16 @@
-<div class="flex justify-between p-5">
-    <div>
+<div class="flex justify-between bg-gray-100 p-5">
+    <div class="flex">
         <img class="w-[50px]" src="https://cdn.vectorstock.com/i/1000x1000/07/51/letter-t-logo-flat-icon-style-vector-5660751.webp" alt="">
         <h1 class="italic text-4xl font-bold">Talky</h1>
     </div>
     
-    <div class="flex gap-6 justify-around">
-        <button (click)="toggleRegistrationForm()" class="w-[8vw] h-[5vh] border border-gray-300">Get Started</button>
-      
-        <button (click)="toggleLoginForm()" class="bg-blue-300 w-[8vw] h-[5vh]">login</button>
-    </div>
-    <hr>
-    <div *ngIf="showLoginForm" class=" p-4 align-center flex items-center justify-center flex-col rounded border-3 border border-gray-300 w-[30vw] ml-auto mr-auto h-[75vh] mt-15">
-      <h1 class="font-bold text-5xl italic">Talky</h1>
-      <form class="flex flex-col gap-10 mt-[40px] mb-[20px]" action="" >
-          <input type="email" placeholder="Email" class="bg-gray-300 h-[5vh] text-black-900 w-[20vw] text-center">
-          <input type="password" placeholder="Password" class="bg-gray-300 h-[5vh] text-black-900 w-[20vw] text-center">
-          <button  (click)="submitLogin()" class="bg-blue-300 w-[20vw] h-[5vh] text-white text-center">Login</button>
-      </form>
-      <p routerLink="" class="mb-4">Forgot password?</p>
-      <p>Don't Have an Account? <span routerLink="" class="text-blue-400">Sign Up</span></p>
-  </div>
-  <div *ngIf="showRegistrationForm" class=" p-4 align-center flex items-center justify-center flex-col rounded border-3 border border-gray-300 w-[30vw] ml-auto mr-auto h-[85vh] mt-12">
-    <h1 class="italic font-bold text-5xl">Talky</h1>
-    <p class="mt-6"><i>sign Up to see your friends <br>photos and posts</i></p>
-    <button class="bg-blue-300 mt-4 mb-4 w-[20vw] h-[5vh] text-center rounded-full border">Login with Facebook</button>
-    <h4><i>Or</i></h4>
-    <form action="" class="flex flex-col gap-10 mt-4 mb-4">
-        <input type="text" placeholder="Username" class=" w-[20vw] h-[5vh] bg-gray-300 text-black placeholder-center text-center">
-        <input type="email" placeholder="Email" class=" w-[20vw]  h-[5vh] bg-gray-300 text-center">
-        <input type="password" placeholder="Password" class=" h-[5vh] w-[20vw] bg-gray-300 text-center">
-        <button (click)="submitRegistration()" class="bg-blue-300 text-white  w-[20vw] h-[5vh] text-center">Register</button>
-    </form>
-    <p>Already Have an Account? <span class="text-blue-300">Login</span></p>
-</div>
+    <div  class=" flex gap-6 ">
+      <button (click)="openModal()" class="w-[8vw] h-[5vh] border border-gray-300 bg-blue-300">Get Started</button>
+      <button (click)="loginModal()" class="w-[8vw] h-[5vh] border border-gray-300 bg-blue-300">Login</button>
 
-  
+    </div> 
 </div>
-
 <div>
-  
-  
+  <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
 </div>
 

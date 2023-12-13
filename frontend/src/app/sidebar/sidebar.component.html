@@ -1,20 +1,21 @@
 <div class="flex items-start justify-between flex-col h-[100vh] gap-5 p-5 rounded border-3 border border-gray-300 w-[20vw]">
     <div class="w-[20vw] flex gap-8 flex-col">
-        <h1 class="font-bold italic text-5xl">Talky</h1>
-        <h2 routerLink="/home" class="text-4xl">
-            <i class="fa-solid fa-house-user text-4xl"></i>Home
+        <h1 routerLink="/" class="font-bold italic text-5xl">Talky</h1>
+        <h2 routerLink="/home" class="text-2xl">
+            <i class="fa-solid fa-house-user text-2xl"></i>Home
         </h2>
-        <h2 class="text-4xl">
+        <h2 class="text-2xl">
             <i class="fa-solid fa-magnifying-glass text-4xl"></i>Explore
         </h2>
-        <a (click)="hidden=!hidden" >  <button class="bg-blue-300 w-[8vw] h-[5vh] rounded font-bold">Post</button></a>
+        <a (click)="hidden=!hidden" >  <button class="bg-blue-300 w-[8vw] h-[5vh] rounded font-bold">+ Post</button></a>
     </div>
     <div class="w-[20vw] flex flex-col gap-8">
-        <h2 routerLink="/"class="text-4xl">
-            <i class="fa-solid fa-right-from-bracket text-4xl"></i>Logout
+        
+        <h2 (click)="profileModal()"class="text-2xl">
+            <i class="fa-solid fa-circle-user text-2xl"></i>Profile
         </h2>
-        <h2 class="text-4xl">
-            <i class="fa-solid fa-circle-user text-4xl"></i>
+        <h2 routerLink="/"class="text-2xl">
+            <i class="fa-solid fa-right-from-bracket text-2xl"></i>Logout
         </h2>
     </div>
 </div>
