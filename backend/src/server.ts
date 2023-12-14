@@ -3,39 +3,36 @@ import express, {
     Request,
     Response,
     json,
-    urlencoded,
+    
   } from "express";
   
   import dotenv from "dotenv";
-  import cors from "cors";
-//   import user_router from "./routes/userRouter";
- 
-  
+import userRouter from "./routes/userRouter";
   dotenv.config();
   
-  const app = express();
-  app.use(urlencoded({ extended: true }));
-  app.use(json());
-  app.use(cors());
-  
-//   app.use("/user", user_router);
 
+
+
+  const PORT = process.env.SERVER_PORT || 5020;
   
-  app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-    res.json({
-      message: err.message,
-    });
-  });
+ 
   
+  
+  const app = express();
+  
+  app.use(json());
+  
+  
+
   app.get("/", (req, res) => {
     res.send({ status: "Ok", message: "Api!" });
   });
+
+  app.use("/user",userRouter)
   
-  app.get("*", (req, res) => {
-    res.status(404).send({ message: "Page not found" });
-  });
+ 
   
-  const PORT = process.env.SERVER_PORT || 5020;
+  
   app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });

@@ -4,9 +4,9 @@ import * as sql from "mssql";
 dotenv.config();
 
 export const sqlConfig: sql.config = {
-  user: process.env.DB_USER as string,
-  password: process.env.DB_PWD as string,
-  database: process.env.DB_NAME as string,
+  user: process.env.DB_USER as string || 'sa',
+  password: process.env.DB_PWD as string || '1234',
+  database: process.env.DB_NAME as string ||'talky',
   server: "localhost",
   pool: {
     max: 10,
