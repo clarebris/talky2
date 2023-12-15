@@ -1,8 +1,11 @@
-CREATE OR ALTER  PROCEDURE registerUser
-	@_id varchar(255),
-	@username varchar(255),	
-	@email varchar(255),
-	@password varchar(255)
+CREATE OR ALTER  PROCEDURE [dbo].[registerUser]
+	@_id varchar(100),
+	@username varchar(100),
+	@profileImage VARCHAR(500),
+    @fullName VARCHAR(250),	
+	@email varchar(250),
+	@password varchar(250)
+	
 	
 as
 
@@ -10,8 +13,7 @@ set nocount on;
 
 begin
 	INSERT INTO dbo.users
-	(_id, username, email, password )
+	(_id, profileImage, fullName, email, password, username )
 	VALUES
-	(@_id,@username, @email, @password );
+	(@_id, @profileImage, @fullName, @email, @password, @username );
 end;
-

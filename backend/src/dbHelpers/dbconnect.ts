@@ -1,39 +1,69 @@
-import mssql from 'mssql';
-import { sqlConfig } from '../config/config'
- 
- export default class DatabaseHelper{
-    // Singleton
- 
-    private static instance: DatabaseHelper;
-    private pool: Promise<mssql.ConnectionPool>
- 
-    private constructor() {
-        this.pool = mssql.connect(sqlConfig)
-    }
- 
-    public static getInstance(): DatabaseHelper {
-      if (!DatabaseHelper.instance) {
-        DatabaseHelper.instance = new DatabaseHelper();
+import * as sql from "mssql";
+import dotenv from "dotenv";
+import { sqlConfig } from "../config/config";
+
+dotenv.config();
+
+const pool = new sql.ConnectionPool(sqlConfig);
+// console.log(pool);
+
+const poolConnect = pool.connect();
+
+export async function query(queryString: string): Promise<sql.IResult<any>> {
+  await poolConnect;
+
+  try {
+    const request = new sql.Request(pool);
+    const result = await request.query(queryString);
+    return result;
+  } catch (error) {
+    throw new Error(`Error executing SQL query: ${error}`);
+  }
+}
+
+export const execute = async (
+  procedureName: string,
+  params: { [key: string]: any } = {}
+) => {
+  await poolConnect;
+
+  try {
+    const request = new sql.Request(pool);
+
+    for (const key in params) {
+      if (params.hasOwnProperty(key)) {
+        request.input(key, params[key]);
       }
-      return DatabaseHelper.instance;
     }
- 
-   
-    private static addInputsToRequest(request:mssql.Request, data:{[x:string]:string|number|null}={}){
-        const keys = Object.keys(data)
-        keys.map(keyName=>{
-            return request.input(keyName, data[keyName])
-        })
-        return request
-    }
-   
-    async exec (storedProcedure:string, data:{[x:string]:string|number|null}={}){
-        let  request :mssql.Request= await (await this.pool).request()
-        request= DatabaseHelper.addInputsToRequest(request,data)
-        return await request.execute(storedProcedure)
-    }
- 
-    async query(queryString:string){
-        return (await this.pool).request().query(queryString)  
-    }
+
+    const result = await request.execute(procedureName);
+    return result;
+  } catch (error) {
+    throw new Error(`Error executing stored procedure: ${error}`);
+  }
+};
+
+// `EXEC ${procedureName}` use when runiing stored procedure without params
+
+// to use with params
+// const procedureName = 'MyProcedureWithParams'; // Replace with your actual procedure name
+//   const params = {
+//     Param1: 'Value1',
+//     Param2: 'Value2',
+//     // Add more parameters as needed
+//   };
+//     const result = await execute(procedureName, params);
+
+export async function handleTVP(parameterName: string, values: any[]) {
+  await poolConnect;
+
+  try {
+    const request = new sql.Request(pool);
+    // Assuming mssql.TVP is only used for UserIds
+    request.input(parameterName, sql.TVP, values);
+    const result = await request.execute("fetchPostsForUsers"); // Replace with your actual stored procedure name
+    return result;
+  } catch (error) {
+    throw new Error(`Error executing stored procedure with TVP: ${error}`);
+  }
 }
