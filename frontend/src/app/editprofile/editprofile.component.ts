@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./editprofile.component.css']
 })
 export class EditprofileComponent {
+     
 
 }
