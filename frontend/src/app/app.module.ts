@@ -16,6 +16,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     SidebarComponent,
     PeopleComponent,
     PostComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,

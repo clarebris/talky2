@@ -4,8 +4,8 @@ post http://localhost:1850/user/register
 Content-Type: application/json
 
 {
-    "username": "clare2",
-    "email":"clare2@gmail.com",
+    "username": "Don",
+    "email":"gordon2@gmail.com",
     "password": "@Qwerty123"
      
 }
@@ -17,18 +17,19 @@ post http://localhost:1850/user/login
 Content-Type: application/json
 
 {    
-    "email":"clare2@gmail.com",
+    "email":"gordon2@gmail.com",
     "password": "@Qwerty123"
 }
+
+#####get user by id
+get http://localhost:1850/user/b1d4367f-8696-4259-acb4-528ba5adbc31
+token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbGViLmJhcmFrYUB0aGVqaXR1LmNvbSIsImlkIjoiMjhlNjFmNmUtZTgzOC00MWM3LWExNTUtMzgwYTg0ZDc4ODcxIiwiaWF0IjoxNzAwOTk0NTc1LCJleHAiOjE3MDEwODA5NzV9.-LbWQugUV9a0G3Uk5OAZBN3HGbijJU-R9XxsxSImIoY
+
+
 #####get all users
 
 get http://localhost:1850/user
 token :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNsYXJlMSIsImVtYWlsIjoiY2xhcmUxQGdtYWlsLmNvbSIsIl9pZCI6ImIxZDQzNjdmLTg2OTYtNDI1OS1hY2I0LTUyOGJhNWFkYmMzMSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDI2MjkzNzksImV4cCI6MTcwMjcxNTc3OX0.qM8gyn9DD5ittVAJ2evHN4I6dyRUVbPY37LTrdBXFoU
-
-#####get one user by id
-get http://localhost:1850/user/b1d4367f-8696-4259-acb4-528ba5adbc31
-token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNhbGViLmJhcmFrYUB0aGVqaXR1LmNvbSIsImlkIjoiMjhlNjFmNmUtZTgzOC00MWM3LWExNTUtMzgwYTg0ZDc4ODcxIiwiaWF0IjoxNzAwOTk0NTc1LCJleHAiOjE3MDEwODA5NzV9.-LbWQugUV9a0G3Uk5OAZBN3HGbijJU-R9XxsxSImIoY
-
 
 #####update user
 
@@ -57,43 +58,46 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWls
 
 
 
-### CREATE POST 
+### Create post 
 POST http://localhost:1850/post/createPost
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNsYXJlMiIsImVtYWlsIjoiY2xhcmUyQGdtYWlsLmNvbSIsIl9pZCI6IjVhMGU3ZjA4LTUzYmYtNDkxMS05OGI1LTkyZGUxZmY3M2FhOSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDI2MzEwODMsImV4cCI6MTcwMjcxNzQ4M30.TGOJJxjBcQzdENB6_AsU57C6-Jd10S91MRkF_tFW_9Y
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhbmllbCIsImVtYWlsIjoiZGFuaWVsMkBnbWFpbC5jb20iLCJfaWQiOiI4Yzc5NzY1MS02OWVlLTRhYzMtOGNkOS1hOTg5YjE5ZTZjNjIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAyNjQzMjI4LCJleHAiOjE3MDI3Mjk2Mjh9.cVR0CcB4Lj2O8Dtao7LvB24bzHoVaK5UGYv3fXjgFio
 Content-Type: application/json
 
 {
-    "postImage":"https://images.unsplash.com/photo-1682685797898-6d7587974771?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "created_by_user_id":"5a0e7f08-53bf-4911-98b5-92de1ff73aa9",
-    "caption":"My caption",
-    "created_at":"1400hrs"    
+    
+    "created_by_user_id":"8c797651-69ee-4ac3-8cd9-a989b19e6c62",
+    "caption":"My caption 333",
+    "created_at":"1400hrs" ,
+    "postImage":"https://images.unsplash.com/photo-1682685797898-6d7587974771?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"   
 }
 
 
-### update a post 
+### update post 
 
 PUT http://localhost:1850/post/editPost
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWlsIjoiZGlhbmFhYmVyaTEyQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmODNjZjQ3MC0xYjc1LTQ0ZWMtYWRiNy03ZDZjMGRlZWJkOGIiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJEaWFuYSBhYmVyaSIsImlhdCI6MTcwMjU4NjM0NSwiZXhwIjoxNzAyNjcyNzQ1fQ.q2f4tcavzwXBuyMrmusb7dioZ2oM3PqhzIQNkdXJHLA
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhbmllbCIsImVtYWlsIjoiZGFuaWVsMkBnbWFpbC5jb20iLCJfaWQiOiI4Yzc5NzY1MS02OWVlLTRhYzMtOGNkOS1hOTg5YjE5ZTZjNjIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAyNjQzMjI4LCJleHAiOjE3MDI3Mjk2Mjh9.cVR0CcB4Lj2O8Dtao7LvB24bzHoVaK5UGYv3fXjgFio
 Content-Type: application/json
 
 {
     "UpdatedPostImage":["https://c4.wallpaperflare.com/wallpaper/193/556/883/car-neon-chevrolet-corvette-race-cars-hd-wallpaper-preview.jpg","https://w0.peakpx.com/wallpaper/135/1018/HD-wallpaper-car-sports-car-neon-backlight-asphalt.jpg"],
     "updatedCaption":"This is my favorite caption",
-    "post_id" : "8884d4f0-16b3-4267-ab24-01075082ce56",
+    "post_id" : "a44e5190-1124-4776-9ee9-c70748765938",
      "updated_at" : "now"
 }
 
-### DELETE POST
+### Delete post
 DELETE http://localhost:1850/post/bb0a10b2-7524-4c8b-8177-d3e389f0f13c
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWlsIjoiZGlhbmFhYmVyaTEyQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmODNjZjQ3MC0xYjc1LTQ0ZWMtYWRiNy03ZDZjMGRlZWJkOGIiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJEaWFuYSBhYmVyaSIsImlhdCI6MTcwMjU4NjM0NSwiZXhwIjoxNzAyNjcyNzQ1fQ.q2f4tcavzwXBuyMrmusb7dioZ2oM3PqhzIQNkdXJHLA
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhbmllbCIsImVtYWlsIjoiZGFuaWVsMkBnbWFpbC5jb20iLCJfaWQiOiI4Yzc5NzY1MS02OWVlLTRhYzMtOGNkOS1hOTg5YjE5ZTZjNjIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAyNjQzMjI4LCJleHAiOjE3MDI3Mjk2Mjh9.cVR0CcB4Lj2O8Dtao7LvB24bzHoVaK5UGYv3fXjgFio
+Content-Type: application/json
 
-### GET ALL POSTS
+### Get Posts
 GET http://localhost:1850/post
-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWlsIjoiZGlhbmFhYmVyaTEyQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmODNjZjQ3MC0xYjc1LTQ0ZWMtYWRiNy03ZDZjMGRlZWJkOGIiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJEaWFuYSBhYmVyaSIsImlhdCI6MTcwMjU4NjM0NSwiZXhwIjoxNzAyNjcyNzQ1fQ.q2f4tcavzwXBuyMrmusb7dioZ2oM3PqhzIQNkdXJHLA
-
-### GET ONE POST 
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhbmllbCIsImVtYWlsIjoiZGFuaWVsMkBnbWFpbC5jb20iLCJfaWQiOiI4Yzc5NzY1MS02OWVlLTRhYzMtOGNkOS1hOTg5YjE5ZTZjNjIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAyNjQzMjI4LCJleHAiOjE3MDI3Mjk2Mjh9.cVR0CcB4Lj2O8Dtao7LvB24bzHoVaK5UGYv3fXjgFio
+Content-Type: application/json
+### Get single Post 
 GET http://localhost:1850/post/9629028b-b4b8-4a2f-beef-d424a0b9dcbe
-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWlsIjoiZGlhbmFhYmVyaTEyQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmODNjZjQ3MC0xYjc1LTQ0ZWMtYWRiNy03ZDZjMGRlZWJkOGIiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJEaWFuYSBhYmVyaSIsImlhdCI6MTcwMjU4NjM0NSwiZXhwIjoxNzAyNjcyNzQ1fQ.q2f4tcavzwXBuyMrmusb7dioZ2oM3PqhzIQNkdXJHLA
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRhbmllbCIsImVtYWlsIjoiZGFuaWVsMkBnbWFpbC5jb20iLCJfaWQiOiI4Yzc5NzY1MS02OWVlLTRhYzMtOGNkOS1hOTg5YjE5ZTZjNjIiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzAyNjQzMjI4LCJleHAiOjE3MDI3Mjk2Mjh9.cVR0CcB4Lj2O8Dtao7LvB24bzHoVaK5UGYv3fXjgFio
+Content-Type: application/json
 
 
 
@@ -106,14 +110,14 @@ token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWls
 
 
 
-###  FOLLOW USER
-POST http://localhost:1850/toggleFollowUser
+###  follow user
+POST http://localhost:1850/FollowUser
 token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWlsIjoiZGlhbmFhYmVyaTEyQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmODNjZjQ3MC0xYjc1LTQ0ZWMtYWRiNy03ZDZjMGRlZWJkOGIiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJEaWFuYSBhYmVyaSIsImlhdCI6MTcwMjU4NjM0NSwiZXhwIjoxNzAyNjcyNzQ1fQ.q2f4tcavzwXBuyMrmusb7dioZ2oM3PqhzIQNkdXJHLA
 Content-Type: application/json
 
 {
-   "following_user_id":"d83cf470-1b75-44ec-adb7-7d6c0deebd8b", 
-   "followed_user_id":"d83cf470-1b75-44ec-adb7-7d6c0deebd8b"
+   "following_id":"d83cf470-1b75-44ec-adb7-7d6c0deebd8b", 
+   "followed_id":"d83cf470-1b75-44ec-adb7-7d6c0deebd8b"
 }
 
 #### get followers
@@ -122,7 +126,7 @@ token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWl
 
 
 
-### GET FOLLOWINGS
+### Get the followings/jesus
 GET http://localhost:1850/getFollowings/d83cf470-1b75-44ec-adb7-7d6c0deebd8b
 token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJkaWFuYSIsImVtYWlsIjoiZGlhbmFhYmVyaTEyQGdtYWlsLmNvbSIsInVzZXJfaWQiOiJmODNjZjQ3MC0xYjc1LTQ0ZWMtYWRiNy03ZDZjMGRlZWJkOGIiLCJpc0FkbWluIjpmYWxzZSwiZnVsbE5hbWUiOiJEaWFuYSBhYmVyaSIsImlhdCI6MTcwMjU4NjM0NSwiZXhwIjoxNzAyNjcyNzQ1fQ.q2f4tcavzwXBuyMrmusb7dioZ2oM3PqhzIQNkdXJHLA
 

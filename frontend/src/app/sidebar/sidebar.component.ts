@@ -12,7 +12,7 @@ export class SidebarComponent {
   constructor(public dialog: MatDialog) {}
   profileModal(): void {
     const dialogRef = this.dialog.open(ProfileComponent, {
-      width: '400px',
+      width: '860px',
       data: { title: 'Modal Title', content: 'Modal Content' }
     });
 

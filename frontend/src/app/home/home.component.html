@@ -1,19 +1,53 @@
 <div class="flex justify-between mt-4">
-<app-sidebar></app-sidebar>
-<div><form class="flex items-center justify-center ">
-    <input
+  <div class="rounded border-3 border border-gray-300 w-[25%] flex items-start justify-between flex-col h-[100vh] gap-5 p-8 w-[20vw]">
+   <div class="w-[20vw] flex gap-8 flex-col">
+      <h1 routerLink="/" class="font-bold italic text-5xl">Talky</h1>
+      <h2 routerLink="/home" class="text-2xl hover:bg-green-600 w-[16vw]">
+          <i class="fa-solid fa-house-user "></i>&nbsp;&nbsp;Home
+      </h2>
+      <h2 class="text-2xl hover:bg-green-600 w-[16vw]">
+          <i class="fa-solid fa-magnifying-glass text-2xl"></i>&nbsp;&nbsp;Explore
+      </h2>
+        <button (click)="hidden=!hidden" class="bg-blue-300 w-[8vw] h-[5vh] rounded font-bold hover:bg-green-600 ">+ Post</button>
+   </div>
+   <div class="w-[20vw] flex flex-col gap-8">
+      
+      <h2 (click)="toggleprofile()"class="text-2xl hover:bg-green-600 w-[16vw]">
+          <i class="fa-solid fa-circle-user text-2xl"></i>&nbsp;&nbsp;Profile
+      </h2>
+      <h2 routerLink="/"class="text-2xl hover:bg-green-600 w-[16vw]">
+          <i class="fa-solid fa-right-from-bracket text-2xl"></i>&nbsp;&nbsp;Logout
+      </h2>
+   </div>
+ </div>
+
+
+
+ <div *ngIf="profile" class="w-[50%]">
+  
+  <app-profile></app-profile>  
+ </div>
+
+
+
+
+ <div class="w-[25%] align-center p-4 rounded border-3 border border-gray-300">
+   <form class="flex items-center  mb-6 ">
+     <input
       type="text"
       class="border border-gray-300 p-2 rounded-l-full focus:outline-none"
       placeholder="Search..."
-    />
-    <button
+     />
+     <button
       type="submit"
       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r-full"
-    >
+     >
       Search
-    </button>
-  </form>
-  </div>
+     </button>
+   </form>
   <app-people></app-people>
+  </div>
+  
   
 </div>
+<app-post *ngIf="!hidden" ></app-post>

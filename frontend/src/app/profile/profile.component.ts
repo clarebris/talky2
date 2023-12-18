@@ -7,5 +7,5 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  constructor( @Inject(MAT_DIALOG_DATA) public data: any) {}
+  profile=false;
 }
