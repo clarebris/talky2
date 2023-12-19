@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommentComponent } from './comment/comment.component';
+import { FeedComponent } from './feed/feed.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CommentComponent } from './comment/comment.component';
     PeopleComponent,
     PostComponent,
     NotfoundComponent,
-    CommentComponent
+    CommentComponent,
+    FeedComponent
   ],
   imports: [
     BrowserModule,
