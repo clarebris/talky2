@@ -9,6 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PostComponent } from './post/post.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { FeedComponent } from './feed/feed.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'sidebar', component: SidebarComponent },
   { path: 'post', component: PostComponent },
+  { path: 'feed', component: FeedComponent },
   { path: '**', component: NotfoundComponent },
 ];
 

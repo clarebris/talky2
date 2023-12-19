@@ -18,10 +18,11 @@ export class HomeComponent {
     // Handle the registration form submission logic here
     console.log('Submitting registration form...');
   }
+  feed=true;
   profile=false;
   toggleprofile() {
-    
     this.profile = true
+    this.feed=false
   }
 
 }

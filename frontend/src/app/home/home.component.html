@@ -1,5 +1,5 @@
-<div class="flex justify-between mt-4">
-  <div class="rounded border-3 border border-gray-300 w-[25%] flex items-start justify-between flex-col h-[100vh] gap-5 p-8 w-[20vw]">
+<div class="flex justify-around mt-4">
+  <div class="h-screen sticky top-0 rounded border-3 border border-gray-300 w-[25%] flex items-start justify-between flex-col h-[100vh] gap-5 p-8 w-[20vw]">
    <div class="w-[20vw] flex gap-8 flex-col">
       <h1 routerLink="/" class="font-bold italic text-5xl">Talky</h1>
       <h2 routerLink="/home" class="text-2xl hover:bg-green-600 w-[16vw]">
@@ -21,13 +21,22 @@
    </div>
  </div>
 
+ 
 
 
- <div *ngIf="profile" class="w-[50%]">
+
+ <div *ngIf="profile" class="w-[50%] relative">
   
   <app-profile></app-profile> 
+   
   
  </div>
+ <div *ngIf="feed" class="w-[50%]">
+  <app-feed ></app-feed>
+
+ </div>
+
+
 
 
 

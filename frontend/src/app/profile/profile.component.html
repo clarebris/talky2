@@ -1,16 +1,16 @@
 <div class="p-4">
     <div class="flex gap-5 bg-white">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <i class="fa fa-arrow-left" aria-hidden="true" (click)="goHome()" ></i>
         <div>
         <h2 class="font-bold">Name</h2>
         <p>0 posts</p>
         </div>
     </div>
     <div>
-    <div class="bg-slate-200 w-[100%] min-h-[30vh]"><img src="" alt=""></div>
+    <div class="bg-slate-200 w-[100%] min-h-[30vh]"><img class="h-[35vh] w-full object-cover" src="https://media.istockphoto.com/id/1252210017/photo/smiling-girl-playing-on-the-swing.jpg?s=2048x2048&w=is&k=20&c=r7Cb7OjvBm1Cd46eL8wrFQRWKFqhvQOWIm_Uavqz5wo=" alt=""></div>
    <div class="flex justify-evenly mb-4"> 
-     <div class="bg-stone-700 mt-[-40px] border rounded-full w-20 h-20">
-        <img src="" alt="">     
+     <div class="bg-stone-700 mt-[-60px] border w-32 h-32 rounded-full overflow-hidden">
+        <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">     
      </div>
      <button class="bg-blue-500 rounded w-[8vw] h-[4vh] align-right border text-white mt-5" >Edit profile</button>
   </div>
@@ -20,11 +20,11 @@
     <p>username</p>
     <p>description</p>
     <div><p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;location</p></div>
-    <div class="flex gap-5  mb-6"><p>Following</p><p>Followers</p></div>   
+    <div class="flex gap-5 mb-6"><p class="hover:underline">Following</p><p class="hover:underline">Followers</p></div>   
 </div>
 <div class="flex justify-around">
-    <h3 class="hover:font-bold">Posts</h3>
-    <h3 class="hover:font-bold">Likes</h3>
+    <h3 class="hover:underline font-bold">Posts</h3>
+    <h3 class="hover:underline font-bold">Likes</h3>
 </div><br>
-<hr>
+<hr class="text-blue-500">
 </div>
