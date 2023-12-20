@@ -13,7 +13,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { PeopleComponent } from './people/people.component';
 import { PostComponent } from './post/post.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommentComponent } from './comment/comment.component';
@@ -40,7 +40,8 @@ import { FeedComponent } from './feed/feed.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
