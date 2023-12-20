@@ -4,9 +4,9 @@
     <!-- <button class="bg-blue-300 mt-4 mb-4 w-[20vw] h-[5vh] text-center rounded-full border">Login with Facebook</button>
     <h4><i>Or</i></h4> -->
     <form class="flex flex-col gap-10 mt-4 mb-4" [formGroup]="registrationForm" (ngSubmit)="registerUser()">
-        <input type="text" placeholder="Username" class=" w-[20vw] h-[5vh] bg-gray-300 text-black text-center">
-        <input type="email" placeholder="Email" class=" w-[20vw]  h-[5vh] bg-gray-300 text-center">
-        <input type="password" placeholder="Password" class=" h-[5vh] w-[20vw] bg-gray-300 text-center">
+        <input type="text" placeholder="Username" class=" w-[20vw] h-[5vh] bg-gray-300 text-black p-4 ">
+        <input type="email" placeholder="Email" class=" w-[20vw]  h-[5vh] bg-gray-300 p-4 ">
+        <input type="password" placeholder="Password" class=" h-[5vh] w-[20vw] bg-gray-300 p-4">
         <button type="submit" class="bg-blue-300 text-white  w-[20vw] h-[5vh] text-center">Register</button>
     </form>
     <p>Already Have an Account? <span class="text-blue-300" routerLink="/login">Login</span></p>

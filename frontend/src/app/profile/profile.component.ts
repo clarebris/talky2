@@ -9,8 +9,6 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 export class ProfileComponent {
   profile=false;
 
-  goHome(){
-    this.profile=!this.profile
-  }
+
   
 }

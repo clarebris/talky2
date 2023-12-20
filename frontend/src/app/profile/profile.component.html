@@ -1,6 +1,6 @@
 <div class="p-4">
     <div class="flex gap-5 bg-white">
-        <i class="fa fa-arrow-left" aria-hidden="true" (click)="goHome()" ></i>
+        <i class="fa fa-arrow-left" aria-hidden="true" ></i>
         <div>
         <h2 class="font-bold">Name</h2>
         <p>0 posts</p>
@@ -12,19 +12,20 @@
      <div class="bg-stone-700 mt-[-60px] border w-32 h-32 rounded-full overflow-hidden">
         <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=1746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">     
      </div>
-     <button class="bg-blue-500 rounded w-[8vw] h-[4vh] align-right border text-white mt-5" >Edit profile</button>
+     <button class="bg-blue-500 rounded w-[8vw] h-[4vh] align-right border text-white mt-5" routerLink="/edit">Edit profile</button>
   </div>
     </div>
 <div class="flex flex-col gap-3">
     <h2 class="font-bold">fullname</h2>
-    <p>username</p>
+    <p class="italic">username</p>
     <p>description</p>
-    <div><p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;location</p></div>
-    <div class="flex gap-5 mb-6"><p class="hover:underline">Following</p><p class="hover:underline">Followers</p></div>   
+    <div><p class="italic mb-4"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;location</p></div>
+      
 </div>
 <div class="flex justify-around">
     <h3 class="hover:underline font-bold">Posts</h3>
-    <h3 class="hover:underline font-bold">Likes</h3>
+    <h3 class="hover:underline font-bold">Following</h3>
+    <h3 class="hover:underline font-bold">Followers</h3>
 </div><br>
 <hr class="text-blue-500">
 </div>
