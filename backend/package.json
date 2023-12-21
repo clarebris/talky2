@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watchAll",
     "start:build": "npx tsc -w",
     "start:run": "nodemon dist/server.js",
     "start": "concurrently npm:start:*"
@@ -36,5 +36,9 @@
     "nodemon": "^3.0.2",
     "typescript": "^5.3.3",
     "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0"
   }
 }
